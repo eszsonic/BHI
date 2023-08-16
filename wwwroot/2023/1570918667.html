@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1570918667.html</title>
+</head>
+<body>
+<div id="papertitle" style="box-sizing: border-box; font-size: 36px; max-width: 750px; overflow-wrap: break-word; white-space: normal; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+MultiTrans: Multi-Branch Transformer Network for Medical Image Segmentation<dd style="box-sizing: border-box; line-height: 1.42857; margin-left: 0px;"><br>
+</dd>
+</div>
+<div id="authors" style="box-sizing: border-box; max-width: 750px; overflow-wrap: break-word; white-space: normal; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><br
+style="box-sizing: border-box;">
+<b style="box-sizing: border-box; font-weight: bold;"><i style="box-sizing: border-box;">
+Yanhua Zhang; Gabriella Balestra; Zhang Ke; Valentina Giannini; Jingyu Wang; Samanta Rosati</i></b>; 2023 IEEE EMBS International Conference on Biomedical and HealthInformatics (BHI) (IEEE BHI 2023)</div><font style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"
+size="5"><br style="box-sizing: border-box;"><b style="box-sizing: border-box; font-weight: bold;">Abstract</b></font><span
+style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"></span><br
+style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+<br style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+<div id="abstract" style="box-sizing: border-box; max-width: 750px; overflow-wrap: break-word; white-space: normal; text-align: justify; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+Convolutional neural networks (CNN) have made promising improvements in automatic medical image segmentation. However, they show limitations in modeling long-range dependency due to the intrinsic locality properties of convolution kernel. Transformer, which is notable for its ability of global context modeling, has been used to remedy the shortcomings of CNN and break its dominance in medical image segmentation. The self-attention module is both memory and computational inefficient, so many methods choose to build their Transformer branch upon largely downsampled feature maps or adopt the tokenized image patches to fit their model into accessible GPUs. This patch-wise operation restricts the network in extracting pixel-level intrinsic structural or dependencies inside each patch, hurting the performance of pixel-level classification tasks. To tackle these issues, we design a memory- and computation-efficient self-attention module to enable reasoning on relatively high-resolution features, promoting the efficiency of learning global information while effective grasping fine spatial details. Furthermore, we design a novel Multi-Branch Transformer architecture to provide hierarchical features for handling objects with variable shapes and sizes in medical images. By building four parallel Transformer branches on different levels of CNN, our hybrid network aggregates both multi-scale global contexts and multi-scale local features. Extensive experiments on two medical image datasets with different modalities demonstrate the superiority and generality of our proposed network. We also conducted exhaustive experiments to demonstrate the effectiveness of our motivation and the architecture design.</div>
+<div id="keywords" style="box-sizing: border-box; max-width: 750px; overflow-wrap: break-word; white-space: normal; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><br
+style="box-sizing: border-box;">
+<b style="box-sizing: border-box; font-weight: bold;"><i style="box-sizing: border-box;">
+Keywords: Abdominal Multi-Organ Segmentation; Cardiac Segmentation; Deep Learning; Efficient Self-Attention; Parallel Transformer Branches<br> <br><font style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"
+size="5"><br style="box-sizing: border-box;">
+<b style="box-sizing: border-box; font-weight: bold;">Related Material</b></font><span
+style="color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"></span><br
+style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+<br style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+<dd style="box-sizing: border-box; line-height: 1.42857; margin-left: 0px; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, Verdana, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">[<a
+href="https://www.ieee.org//"
+style="box-sizing: border-box; background-color: transparent; color: rgb(115, 149, 197); text-decoration: none;">pdf</a>]
+[<a href="file:///C:\Users\esazo\Desktop\_temp/1570918667.bib"
+style="box-sizing: border-box; background-color: transparent; color: rgb(115, 149, 197); text-decoration: none;">Bibtex</a>]
+[<a href="https://www.ieee.org//" style="box-sizing: border-box;  background-color: transparent; color: rgb(115, 149, 197); text-decoration: none;">arXiv</a>]<span>&nbsp;</span>
+<div class="bibtex" style="box-sizing: border-box; font-weight: normal; text-decoration: none; display: inline; margin-right: 5px;"></dd>
+<p></p>
+</body>
+<span style="font-weight: normal">@inproceedings{Zhan2310:MultiTrans,
+<br> author    = {Yanhua Zhang and Gabriella Balestra and Zhang Ke and Valentina Giannini and
+Jingyu Wang and Samanta Rosati},
+ <br> title    = {{MultiTrans:} {Multi-Branch} Transformer Network for Medical Image
+Segmentation},
+ <br> booktitle    = {2023 IEEE EMBS International Conference on Biomedical and Health
+Informatics (BHI) (IEEE BHI 2023)},
+ <br> address    = {Pittsburgh, USA},
+ <br> pages    = {6},
+ <br> days    = {15},
+ <br> month    = {October},
+ <br> year    = {2023},
+ <br> keywords    = {Abdominal Multi-Organ Segmentation; Cardiac Segmentation; Deep Learning;
+Efficient Self-Attention; Parallel Transformer Branches},
+ <br> abstract    = {Convolutional neural networks (CNN) have made promising improvements in
+automatic medical image segmentation. However, they show limitations in
+modeling long-range dependency due to the intrinsic locality properties of
+convolution kernel. Transformer, which is notable for its ability of global
+context modeling, has been used to remedy the shortcomings of CNN and break
+its dominance in medical image segmentation. The self-attention module is
+both memory and computational inefficient, so many methods choose to build
+their Transformer branch upon largely downsampled feature maps or adopt the
+tokenized image patches to fit their model into accessible GPUs. This
+patch-wise operation restricts the network in extracting pixel-level
+intrinsic structural or dependencies inside each patch, hurting the
+performance of pixel-level classification tasks. To tackle these issues, we
+design a memory- and computation-efficient self-attention module to enable
+reasoning on relatively high-resolution features, promoting the efficiency
+of learning global information while effective grasping fine spatial
+details. Furthermore, we design a novel Multi-Branch Transformer
+architecture to provide hierarchical features for handling objects with
+variable shapes and sizes in medical images. By building four parallel
+Transformer branches on different levels of CNN, our hybrid network
+aggregates both multi-scale global contexts and multi-scale local features.
+Extensive experiments on two medical image datasets with different
+modalities demonstrate the superiority and generality of our proposed
+network. We also conducted exhaustive experiments to demonstrate the
+effectiveness of our motivation and the architecture design.}
+ <br> }
+</html>

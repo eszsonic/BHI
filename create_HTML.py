@@ -5,10 +5,15 @@ import os
 import re
 
 
+current_dirname = os.path.dirname(__file__)
+
 
 ### Root Directories
-path_directory_Excel = r'D:\pdf2Bib\Siavash'
-path_directory_Bibtex = r'D:\pdf2Bib\Siavash'
+year='2023'
+path_directory_Excel = r'C:\Users\esazo\Desktop\_temp'
+path_directory_Bibtex = r'C:\Users\esazo\Desktop\_temp'
+path_save_directory_bib = os.path.join(current_dirname, r'wwwroot/' + year + r'\bib')
+path_save_directory_html = os.path.join(current_dirname, r'wwwroot/' + year)
 
 Excel_File_Name = 'ieeebhi2023-papers (1).xlsx'
 Bibtex_File_Name = '30715.bib'
@@ -123,13 +128,13 @@ for i in range(len(df)):
                             +'ABSTRACT    = {' + paper_abstract + '},\n'
                             +'}')
 
-            file_bib = open(str(Paper_Number[i]) + '.bib', "w", encoding="utf-8")
+            file_bib = open(path_save_directory_bib+r'/'+str(Paper_Number[i]) + '.bib', "w", encoding="utf-8")
             file_bib.write(BibTex_ID)
             file_bib.close()
 
             Bib_Address = 'file:///' + path_directory_Bibtex + '/' + str(Paper_Number[i]) + '.bib'
 
-            f = open(str(Paper_Number[i]) + '.html', 'w', encoding="utf-8")
+            f = open(path_save_directory_html+r'/'+str(Paper_Number[i]) + '.html', 'w', encoding="utf-8")
             ### HTML Template
             html_template = '<!DOCTYPE html>\n' + '<html>\n' + '<head>\n'\
             + '<meta http-equiv="content-type" content="text/html; charset=UTF-8">\n'\
@@ -188,9 +193,9 @@ for i in range(len(df)):
 
 ## Reading all HTML Files in the Directory
 HTML_files=[]
-for file in os.listdir():
+for file in os.listdir(r'wwwroot/'+year):
     if file.endswith(".html"):
-        HTML_files.append(file)
+        HTML_files.append(r'/'+year+r'/'+file)
 
 # Open HTML Files
 for i in range(len(HTML_files)):
