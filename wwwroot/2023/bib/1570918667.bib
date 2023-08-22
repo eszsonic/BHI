@@ -1,0 +1,39 @@
+@inproceedings{Zhan2310:MultiTrans,
+AUTHOR    = {Yanhua Zhang and Gabriella Balestra and Zhang Ke and Valentina Giannini and
+Jingyu Wang and Samanta Rosati},
+TITLE    = {{MultiTrans:} {Multi-Branch} Transformer Network for Medical Image
+Segmentation},
+BOOKTITLE    = {2023 IEEE EMBS International Conference on Biomedical and Health
+Informatics (BHI) (IEEE BHI 2023)},
+ADDRESS    = {Pittsburgh, USA},
+PAGES    = {6},
+DAYS    = {15},
+MONTH    = {October},
+YEAR    = {2023},
+KEYWORDS    = {Abdominal Multi-Organ Segmentation; Cardiac Segmentation; Deep Learning;
+Efficient Self-Attention; Parallel Transformer Branches},
+ABSTRACT    = {Convolutional neural networks (CNN) have made promising improvements in
+automatic medical image segmentation. However, they show limitations in
+modeling long-range dependency due to the intrinsic locality properties of
+convolution kernel. Transformer, which is notable for its ability of global
+context modeling, has been used to remedy the shortcomings of CNN and break
+its dominance in medical image segmentation. The self-attention module is
+both memory and computational inefficient, so many methods choose to build
+their Transformer branch upon largely downsampled feature maps or adopt the
+tokenized image patches to fit their model into accessible GPUs. This
+patch-wise operation restricts the network in extracting pixel-level
+intrinsic structural or dependencies inside each patch, hurting the
+performance of pixel-level classification tasks. To tackle these issues, we
+design a memory- and computation-efficient self-attention module to enable
+reasoning on relatively high-resolution features, promoting the efficiency
+of learning global information while effective grasping fine spatial
+details. Furthermore, we design a novel Multi-Branch Transformer
+architecture to provide hierarchical features for handling objects with
+variable shapes and sizes in medical images. By building four parallel
+Transformer branches on different levels of CNN, our hybrid network
+aggregates both multi-scale global contexts and multi-scale local features.
+Extensive experiments on two medical image datasets with different
+modalities demonstrate the superiority and generality of our proposed
+network. We also conducted exhaustive experiments to demonstrate the
+effectiveness of our motivation and the architecture design.},
+}
