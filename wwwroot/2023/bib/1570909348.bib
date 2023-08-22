@@ -1,0 +1,33 @@
+@inproceedings{Kara2310:Point,
+AUTHOR    = {Hojjat Karami and Ani Ionescu and David Atienza},
+TITLE    = {Point-process based representation learning for Electronic Health Records},
+BOOKTITLE    = {2023 IEEE EMBS International Conference on Biomedical and Health
+Informatics (BHI) (IEEE BHI 2023)},
+ADDRESS    = {Pittsburgh, USA},
+PAGES    = {4},
+DAYS    = {15},
+MONTH    = {October},
+YEAR    = {2023},
+KEYWORDS    = {Electronic Health Records (EHRs); Point Process; irregular sampling;
+informative missingness; self-supervised learning},
+ABSTRACT    = {Irregular sampling of time series in electronic health records (EHRs)
+presents a challenge for the development of machine learning models.
+Additionally, the pattern of missing data in certain clinical variables is
+not random, but depends on the decisions of clinicians and the state of the
+patient. Point process is a mathematical framework for analyzing event
+sequence data that is consistent with irregular sampling patterns. To
+tackle the challenges posed by EHRs, we propose a transformer event encoder
+with point process loss that encodes the pattern of laboratory tests in
+EHRs. We conduct experiments on two real-world EHR databases to evaluate
+our proposed approach. Firstly, we learn the transformer event encoder
+jointly with an existing state encoder in a self-supervised learning
+approach which gives superior performance in negative log-likelihood and
+future event prediction. Additionally, we propose an algorithm for
+aggregating attention weights that can reveal the interaction between the
+events. Secondly, we transfer and freeze the learned transformer event
+encoder to the downstream task for the outcome prediction (mortality and
+sepsis shock), where it outperforms state-of-the-art models for handling
+irregularly-sample time series. Our results demonstrate that our approach
+can improve representation learning in EHRs and can be useful for clinical
+prediction tasks.},
+}

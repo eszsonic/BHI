@@ -1,0 +1,34 @@
+@inproceedings{Choi2310:Drug,
+AUTHOR    = {Geonyeong Choi and Charmgil Hong},
+TITLE    = {Drug induced Liver Injury Prediction with Injective Molecular Transformer},
+BOOKTITLE    = {2023 IEEE EMBS International Conference on Biomedical and Health
+Informatics (BHI) (IEEE BHI 2023)},
+ADDRESS    = {Pittsburgh, USA},
+PAGES    = {4},
+DAYS    = {15},
+MONTH    = {October},
+YEAR    = {2023},
+KEYWORDS    = {Drug induced Liver Injury; Graph Neural Networks; Classification; Graph
+Pooling; Molecular Transformer},
+ABSTRACT    = {Drug-Induced Liver Injury (DILI), liver damage caused by drugs, represents
+a significant factor contributing to the failure of clinical trials.
+Remarkably, the drug development process, which entails an extensive
+timeline spanning several years and incurring costs of billions of dollars
+to achieve FDA approval, could greatly benefit from early DILI prediction.
+Furthermore, through the utilization of DILI prediction, clinicians can
+obtain valuable insights into the potential risks associated with
+medication, empowering them to make more informed decisions when
+prescribing drugs to patients. We employed Graph Neural Networks (GNNs) to
+predict DILI based on drug structures. GNNs consist of node aggregation,
+which gathers node representations, and graph pooling, which compiles node
+representations to portray the graph as a single vector. The graph pooling
+method built on Set Transformer outperforms existing techniques, but we
+identified a limitation: Set Transformer, using a random seed vector as the
+query vector, cannot differentiate between graphs of varied structures.
+Moreover, it was found to potentially lack expressiveness, being randomly
+defined without prior knowledge and relying on a limited number of seed
+vectors. To overcome this issue, we introduced Molecular Transformer which
+employs the unique molecular representation as the query vector. We found
+that using drug toxicity information extracted from drug toxicity
+knowledge-bases as the query vector yielded the best performance.},
+}

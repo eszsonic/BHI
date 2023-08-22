@@ -10,3 +10,5 @@ Keywords
 All author names
 Registration
 
+If script crashes on Bibtex export, search for "KEYWORDS=" without a qutation mark
+

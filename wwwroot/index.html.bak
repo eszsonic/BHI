@@ -123,8 +123,11 @@ body {
         expected to adhere to the terms and constraints invoked by each author's
         copyright.</p>
     </div>
-    <div class="topnav"> <a href="https://www.embs.org/bhi/">BHI</a> <a href="https://www.embs.org/">EMBS</a>
-      <a href="https://www.ieee.org/" style="float:right">IEEE</a> </div>
+    <div class="topnav"> <a href="https://bhi.embs.org/2023/">Conference
+        Website</a> <a href="https://www.embs.org/bhi/" style="float:right">BHI</a>
+      <a href="https://www.embs.org/" style="float:right">EMBS</a> <a href="https://www.ieee.org/"
+
+        style="float:right">IEEE</a> </div>
     <div class="row">
       <div class="leftcolumn">
         <div class="card">
@@ -152,9 +155,9 @@ body {
         </div>
         <div class="card">
           <h2>PUBLISHED PAPERS</h2>
-          <iframe src="papers.html" style="display:block; overflow:hidden; height:100%; width:100%; position: absolute;"
+          <iframe src="papers.html" style="display:block; overflow:hidden; height:100%; width:99%; position: absolute;"
 
-            height="100%" frameborder="0" width="100%"></iframe> </div>
+            height="100%" frameborder="0" width="100%" ></iframe> </div>
       </div>
     </div>
   </body>
