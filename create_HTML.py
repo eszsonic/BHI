@@ -12,12 +12,17 @@ import re
 year='2023'
 path_current_dir = os.path.dirname(__file__)
 
-path_directory_Excel = r'C:\Users\esazo\Desktop\_temp\bhi'
+path_directory_Excel = r'D:\BHI2023'
 Excel_File_Name = 'ieeebhi2023-papers.xlsx'
 
-path_directory_Bibtex = r'C:\Users\esazo\Desktop\_temp\bhi'
+#bib file from EDAS - may need manual editing to correct import errors
+path_directory_Bibtex = r'D:\BHI2023'
 Bibtex_File_Name = '30715.bib'
 
+#original files from EDAS
+path_directory_Pdf = r'D:\BHI2023\ieeebhi2023-papers'
+
+path_save_directory_pdf = os.path.join(path_current_dir, r'wwwroot/' + year + r'\pdfs')
 path_save_directory_bib = os.path.join(path_current_dir, r'wwwroot/' + year + r'\bib')
 path_save_directory_html = os.path.join(path_current_dir, r'wwwroot/' + year)
 
@@ -57,6 +62,7 @@ linksToPapers=[]
 
 ## Create the HTML File
 for i in range(len(df)):
+    #if registration is paid and IEEE Copyright submitted
     if (pd.isna(Registration[i]) is not False):
         # try:
             for j in range(len(bib_database.entries)):
