@@ -12,15 +12,15 @@ import fitz
 year = '2023'
 path_current_dir = os.path.dirname(__file__)
 
-path_directory_Excel = r'D:\BHI-main\BHI2023'
+path_directory_Excel = r'D:\BHI2023'
 Excel_File_Name = 'ieeebhi2023-papers.xlsx'
 
 #bib file from EDAS - may need manual editing to correct import errors
-path_directory_Bibtex = r'D:\BHI-main\BHI2023'
+path_directory_Bibtex = r'D:\BHI2023'
 Bibtex_File_Name = '30715.bib'
 
 #original files from EDAS
-path_directory_Pdf = r'D:\BHI-main\BHI2023\ieeebhi2023-papers'
+path_directory_Pdf = r'D:\BHI2023\ieeebhi2023-papers'
 
 path_save_directory_pdf = os.path.join(path_current_dir,  r'wwwroot' + '\\' + year + r'\pdfs')
 try:
@@ -152,7 +152,7 @@ for i in range(len(df)):
                                 +'ABSTRACT    = {' + paper_abstract + '},\n'
                                 +'}')
 
-                file_bib = open(path_save_directory_bib+r'/'+str(int(Paper_Number[i])) + '.bib', "w", encoding="utf-8")
+                file_bib = open(path_save_directory_bib+str(int(Paper_Number[i])) + '.bib', "w", encoding="utf-8")
                 file_bib.write(BibTex_ID)
                 file_bib.close()
 
@@ -279,13 +279,13 @@ f.write(papers_footer)
 f.close()
 
 ## Reading all HTML Files in the Directory
-# HTML_files=[]
-# for file in os.listdir(r'wwwroot/'+year):
-#     if file.endswith(".html"):
-#         HTML_files.append(file)
+HTML_files=[]
+for file in os.listdir(r'wwwroot/'+year):
+    if file.endswith(".html"):
+        HTML_files.append(file)
 
-# Open HTML Files
-# for i in range(len(HTML_files)):
-#     webbrowser.open("file://"+path_current_dir+"\\wwwroot\\"+year+"\\"+HTML_files[i])
+### Open HTML Files
+for i in range(len(HTML_files)):
+    webbrowser.open("file://"+path_current_dir+"\\wwwroot\\"+year+"\\"+HTML_files[i])
 
 print('\n\nFinish!')
