@@ -63,7 +63,7 @@ linksToPapers=[]
 ## Create the HTML File
 for i in range(len(df)):
     #if registration is paid and IEEE Copyright submitted
-    if (pd.isna(Registration[i]) is not False):
+    if (Registration[i] != ''):
         # try:
             for j in range(len(bib_database.entries)):
                 new_string = bib_database.entries[j]['title'].replace('\n', ' ')
